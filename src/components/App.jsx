@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
-const [name, setName] = useState("");
 
 function App() {
+
+  const [name, setName] = useState(" ");
+
+  function handleChange(event){
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
+
   return (
     <div className="container">
       <h1>Hello </h1>
